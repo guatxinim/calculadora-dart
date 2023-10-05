@@ -1,9 +1,8 @@
 class Calculadora {
     double n1;
     double n2;
-    String operacao;
 
-    Calculadora(this.n1, this.n2, this.operacao);
+    Calculadora(this.n1, this.n2);
 
     adicao() {
         return n1 + n2;
