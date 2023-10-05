@@ -1,5 +1,4 @@
 import 'dart:math';
-
 class Calculadora {
     double n1;
     double n2;
@@ -19,7 +18,7 @@ class Calculadora {
     }
     
     divisao() {
-        if (n2 = 0) {
+        if (n2 == 0) {
             return "Não é possível dividir por 0. Tente com outro número.";
         } else {
             return n1 / n2;
@@ -27,6 +26,6 @@ class Calculadora {
     }
 
     potencia() {
-        return pow(n1, n2);
+        return pow(n1,n2);
     }
 }
