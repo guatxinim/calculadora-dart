@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Calculadora {
     double n1;
     double n2;
@@ -25,6 +27,6 @@ class Calculadora {
     }
 
     potencia() {
-        return n1 ** n2;
+        return pow(n1, n2);
     }
 }
