@@ -3,7 +3,8 @@ import 'calculadora.dart';
 
 class Menu {
   mostraMenu() {
-    LoopMenu:while(true) {
+    LoopMenu:
+    while (true) {
       print('''
       ___________________________
       | Menu:                   |
@@ -19,31 +20,46 @@ class Menu {
       ''');
 
       var operacao = stdin.readLineSync();
-      print("Digite o primeiro número: ")
-      int n1 = int.parse(stdin.readLineSync()!);
-      print("Digite o segundo número: ")
-      int n2 = int.parse(stdin.readLineSync()!);
+      print("Digite o primeiro número: ");
+      double n1 = double.parse(stdin.readLineSync()!);
+      print("Digite o segundo número: ");
+      double n2 = double.parse(stdin.readLineSync()!);
 
       Calculadora calculadora = Calculadora(n1, n2);
 
       switch (operacao) {
-        case '1': {
-          calculadora.adicao();
-        } break;
-        case '2': {
-          calculadora.subtracao();
-        } break;
-        case '3': {
-          calculadora.multiplicacao();
-        } break;
-        case '4': {
-          calculadora.divisao();
-        } break;
-        case '5': {
-          calculadora.potencia();
-        } break;
-        case '6': {} break LoopMenu;
-        default:{print('Operação inválida.');}
+        case '1':
+          {
+            calculadora.adicao();
+          }
+          break;
+        case '2':
+          {
+            calculadora.subtracao();
+          }
+          break;
+        case '3':
+          {
+            calculadora.multiplicacao();
+          }
+          break;
+        case '4':
+          {
+            calculadora.divisao();
+          }
+          break;
+        case '5':
+          {
+            calculadora.potencia();
+          }
+          break;
+        case '6':
+          {}
+          break LoopMenu;
+        default:
+          {
+            print('Operação inválida.');
+          }
       }
     }
   }
