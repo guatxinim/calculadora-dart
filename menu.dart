@@ -3,8 +3,7 @@ import 'calculadora.dart';
 
 class Menu {
   mostraMenu() {
-    LoopMenu:
-    while (true) {
+    do {
       print('''
       ___________________________
       | Menu:                   |
@@ -16,10 +15,16 @@ class Menu {
       | 6. Sair                 |
       |_________________________|
       
-      Escolha uma operação: 
+      Escolha uma operação:
       ''');
 
       var operacao = stdin.readLineSync();
+
+      if (operacao == '6') {
+        print('Encerrando a calculadora');
+        break;
+      }
+
       print("Digite o primeiro número: ");
       double n1 = double.parse(stdin.readLineSync()!);
       print("Digite o segundo número: ");
@@ -29,36 +34,24 @@ class Menu {
 
       switch (operacao) {
         case '1':
-          {
-            calculadora.adicao();
-          }
+          calculadora.adicao();
           break;
         case '2':
-          {
-            calculadora.subtracao();
-          }
+          calculadora.subtracao();
           break;
         case '3':
-          {
-            calculadora.multiplicacao();
-          }
+          calculadora.multiplicacao();
           break;
         case '4':
-          {
-            calculadora.divisao();
-          }
+          calculadora.divisao();
           break;
         case '5':
-          {
-            calculadora.potencia();
-          }
+          calculadora.potencia();
           break;
-        case '6': break LoopMenu;
         default:
-          {
-            print('Operação inválida.');
-          }
+          print('Operação inválida.');
+          break;
       }
-    }
+    } while (true);
   }
 }
