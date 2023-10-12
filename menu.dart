@@ -53,9 +53,7 @@ class Menu {
             calculadora.potencia();
           }
           break;
-        case '6':
-          {}
-          break LoopMenu;
+        case '6': break LoopMenu;
         default:
           {
             print('Operação inválida.');
